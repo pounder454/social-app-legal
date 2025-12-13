@@ -21,8 +21,8 @@
 </head>
 <body>
     <h1>Privacy Policy</h1>
-    <p class="effective-date">Effective Date: September 29, 2025</p>
-    <p>Last Updated: September 29, 2025</p>
+    <p class="effective-date">Effective Date: December 14, 2025</p>
+    <p>Last Updated: December 14, 2025</p>
 
     <p>This Privacy Policy describes how Social ("we," "us," or "our") collects, uses, and shares information when you use our mobile application (the "App").</p>
 
@@ -40,6 +40,7 @@
         <li><strong>Location Data:</strong> We collect your precise location when you check in to venues. Location tracking only occurs when you actively use the check-in feature.</li>
         <li><strong>Device Information:</strong> Device model, operating system version, and app version (collected when you submit bug reports).</li>
         <li><strong>Usage Data:</strong> Information about how you use the App, including crash reports and performance data.</li>
+        <li><strong>Notification Tokens:</strong> We collect device tokens to send push notifications about friend activity, messages, and app updates.</li>
     </ul>
 
     <h2>2. How We Use Your Information</h2>
@@ -48,6 +49,7 @@
         <li>Provide and maintain the App's features and functionality</li>
         <li>Enable you to connect with friends and other users at venues</li>
         <li>Display your location status to friends when checked in</li>
+        <li>Send push notifications about friend activity, messages, and requests</li>
         <li>Allow you to post and view content in venue forums</li>
         <li>Facilitate private messaging between users</li>
         <li>Process and respond to bug reports</li>
@@ -72,6 +74,7 @@
         <li>Authentication and user account management</li>
         <li>Database storage (Firestore)</li>
         <li>File storage for profile photos</li>
+        <li>Push notification delivery (Firebase Cloud Messaging)</li>
         <li>Crash reporting and analytics</li>
     </ul>
     <p>Firebase may process your data in accordance with Google's privacy policies.</p>
@@ -79,12 +82,23 @@
     <h3>3.3 Legal Requirements</h3>
     <p>We may disclose your information if required by law, court order, or government request, or to protect our rights or the safety of users.</p>
 
+    <h3>3.4 Push Notifications</h3>
+    <p>We use push notifications to enhance your experience by providing timely updates about:</p>
+    <ul>
+        <li>Friends checking in to venues near you</li>
+        <li>New messages from friends</li>
+        <li>Friend requests from other users</li>
+        <li>Status updates from your friends</li>
+    </ul>
+    <p>Push notifications are sent via Firebase Cloud Messaging (FCM) and Apple Push Notification service (APNs). You can manage notification preferences in your iOS device Settings. Notifications contain information about the event (e.g., friend name, venue name, message preview) but do not track your activity beyond what is necessary to deliver the notification.</p>
+
     <h2>4. Data Retention</h2>
     <ul>
         <li>Account data is retained until you delete your account</li>
         <li>Forum posts are automatically deleted after 24 hours</li>
         <li>Private messages in venue chats are deleted when all participants check out</li>
         <li>Bug reports are retained for diagnostic purposes</li>
+        <li>Notification tokens are deleted when you delete your account or uninstall the app</li>
     </ul>
 
     <h2>5. Your Rights and Choices</h2>
@@ -95,7 +109,10 @@
     <h3>5.2 Location Services</h3>
     <p>You can disable location access in your device settings. However, this will prevent you from using check-in features.</p>
 
-    <h3>5.3 Blocking Users</h3>
+    <h3>5.3 Push Notifications</h3>
+    <p>You can disable push notifications in your iOS device Settings at any time. This will prevent you from receiving alerts about friend activity and messages.</p>
+
+    <h3>5.4 Blocking Users</h3>
     <p>You can block other users to prevent them from interacting with you in the App.</p>
 
     <h2>6. Age Requirements</h2>
@@ -113,8 +130,9 @@
     <h2>10. Third-Party Services</h2>
     <p>The App uses the following third-party services:</p>
     <ul>
-        <li><strong>Google Firebase:</strong> Backend services, authentication, database, storage</li>
+        <li><strong>Google Firebase:</strong> Backend services, authentication, database, storage, push notifications</li>
         <li><strong>Google Maps:</strong> Venue location display</li>
+        <li><strong>Apple Push Notification service (APNs):</strong> iOS notification delivery</li>
     </ul>
     <p>These services have their own privacy policies governing their use of your information.</p>
 
